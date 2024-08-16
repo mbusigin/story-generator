@@ -1,0 +1,192 @@
+/* Global Styles */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f5a623;
+  --background-color: #f0f4f8;
+  --text-color: #333;
+  --error-color: #e74c3c;
+  --success-color: #2ecc71;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+}
+
+/* App Component */
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: var(--primary-color);
+  padding: 20px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* InputForm Component */
+.input-form {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.input-form button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.input-form button:hover {
+  background-color: #3a7bd5;
+  transform: translateY(-2px);
+}
+
+.input-form button:active {
+  transform: translateY(0);
+}
+
+.input-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* StoryDisplay Component */
+.story-display {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.story-display h2 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.story-display p {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* ImageDisplay Component */
+.image-display {
+  margin-top: 20px;
+}
+
+.image-display img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.image-display img:hover {
+  transform: scale(1.02);
+}
+
+/* Error message */
+.error {
+  color: var(--error-color);
+  background-color: #fde8e6;
+  border: 1px solid var(--error-color);
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .input-form textarea {
+    font-size: 16px;
+  }
+
+  .story-display p {
+    font-size: 16px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.story-display, .image-display {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+}
